@@ -1,0 +1,41 @@
+#resultsLoadingContainer {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     height: 100%;
+     background-color: black;
+     position: absolute;
+     top: 0px;
+     z-index: 98;
+     overflow: hidden;
+}
+
+#penguin {
+     height: 150px;
+}
+
+#penguinPath {
+     stroke-dasharray: 3500;
+     stroke-dashoffset: 0;
+     animation: draw 4s ease-in infinite alternate;
+     stroke: white;
+}
+
+#loadingText {
+     color: white;
+     font-size: 22px;
+     font-weight: 100;
+}
+
+@keyframes draw {
+     0%, 10% {
+               stroke-dashoffset: 3500;
+     }
+     40%, 60% {
+               stroke-dashoffset: 0;
+     }
+     100% {
+               stroke-dashoffset: -3500;
+     }
+}

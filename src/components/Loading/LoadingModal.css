@@ -1,0 +1,59 @@
+#loadingModal {
+     background-color: black;
+     width: 100vw;
+     height: 100vh;
+     position: absolute;
+     z-index: 9999;
+     top: 0px;
+     box-sizing: border-box;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+
+#penguinAnimation {
+     height: 45%;
+     width: 45%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 20px;
+}
+
+
+#penguin {
+     height: 250px;
+
+     
+}
+
+#penguinPath {
+     stroke-dasharray: 3500;
+     stroke-dashoffset: 0;
+     animation: draw 4s ease-in infinite alternate;
+     stroke: white;
+}
+
+#loadingText {
+     color: white;
+     font-size: 26px;
+}
+
+#loadingSubText {
+     color: white;
+     font-size: 20px;
+}
+
+@keyframes draw {
+0%, 10% {
+          stroke-dashoffset: 3500;
+}
+40%, 60% {
+          stroke-dashoffset: 0;
+}
+100% {
+          stroke-dashoffset: -3500;
+}
+}
